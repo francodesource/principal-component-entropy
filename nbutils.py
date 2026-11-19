@@ -6,11 +6,13 @@ class ImageSaver:
         self.save_imgs=save_imgs
         self.destination_folder=destination_folder
 
-    def save_img(self, filename: str, desitination_folder='imgs'):
+    def save_img(self, filename: str):
+        if not self.save_imgs:
+            return
+        
         output_path = Path("imgs/"+filename)
         output_path.parent.mkdir(parents=True, exist_ok=True) 
-        if self.save_imgs:
-            plt.savefig(f'{desitination_folder}/{filename}')
+        plt.savefig(f'{self.destination_folder}/{filename}')
 
 def set_plt_params():
     plt.rcParams.update({
