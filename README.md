@@ -13,7 +13,7 @@ This repository contains two notebooks:
 Clone the repository on your machine:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/francodesource/principal-component-entropy.git
 cd principal-component-entropy
 ```
 
